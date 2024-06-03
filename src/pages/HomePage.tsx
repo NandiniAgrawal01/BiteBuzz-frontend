@@ -1,7 +1,7 @@
 import landingImage from "../assets/landing.png";
 import appDownloadImage from "../assets/appDownload.png";
-import SearchBar, { SearchForm } from "@/components/SearchBar";
-import { useNavigate } from "react-router-dom";
+// import SearchBar, { SearchForm } from "@/components/SearchBar";
+// import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
 //   const navigate = useNavigate();
@@ -19,10 +19,10 @@ const HomePage = () => {
           Tuck into a takeway today
         </h1>
         <span className="text-xl">Food is just a click away!</span>
-        <SearchBar
+        {/* <SearchBar
           placeHolder="Search by City or Town"
           onSubmit={handleSearchSubmit}
-        />
+        /> */}
       </div>
       <div className="grid md:grid-cols-2 gap-5">
         <img src={landingImage} />
