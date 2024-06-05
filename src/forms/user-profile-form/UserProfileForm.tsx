@@ -11,12 +11,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-// import LoadingButton from "@/components/LoadingButton";
-import { Button } from "@/components/ui/button";
-// import { User } from "@/types";
-import { useEffect } from "react";
 import LoadingButton from "@/components/LoadingButton";
+import { Button } from "@/components/ui/button";
 import { User } from "@/types";
+import { useEffect } from "react";
 
 const formSchema = z.object({
   email: z.string().optional(),
@@ -32,16 +30,16 @@ type Props = {
   currentUser: User;
   onSave: (userProfileData: UserFormData) => void;
   isLoading: boolean;
-//   title?: string;
-//   buttonText?: string;
+  title?: string;
+  buttonText?: string;
 };
 
 const UserProfileForm = ({
   onSave,
   isLoading,
   currentUser,
-//   title = "User Profile",
-//   buttonText = "Submit",
+  title = "User Profile",
+  buttonText = "Submit",
 }: Props) => {
   const form = useForm<UserFormData>({
     resolver: zodResolver(formSchema),
